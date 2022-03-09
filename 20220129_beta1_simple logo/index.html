@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <title>TruongDT - Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='css/mobai.css' rel='stylesheet'>
+  <link href='css/thanbai.css' rel='stylesheet'>
+  <link href='css/ketbai.css' rel='stylesheet'>
+  <link href='css/mobile.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body onscroll="myFunction()">
+  <div class="divanhbia">
+    <div class="sologan">
+      <img class="anhlogo2" src="https://truongdt.xyz/src/LogoDT071021v2.png" />
+      <p class="text1">QUỐC TRƯỞNG</p>
+      <!-- <p class="text2">"Lắng nghe và Phát triển"</p> -->
+    </div>
+  </div>
+  <nav class="navbar" id="navbar">
+    <div class="brand-title"><a href="http://truongdt.xyz"><img class="anhlogo"
+          src="https://truongdt.xyz/src/LogoDT071021v2.png" /></a></div>
+    <a class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="https://www.truongdt.xyz" class="textlogo">QUỐC TRƯỞNG</a></li>
+        <li><a href="https://www.truongdt.tk/gi%E1%BA%A3i-tr%C3%AD" class="page">Giải trí</a></li>
+        <li><a href="#">Tiện ích</a></li>
+        <li><a href="#">Trò chơi</a></li>
+        <li><a href="#">Chia sẻ</a></li>
+        <li><a href="https://www.truongdt.tk/lien-he">Liên hệ</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- ////////////////////////////////////////////////////////////////////
+///////////////////////////// Than Bai ////////////////////////////////////// -->
+
+  <div class="thanbai">
+    <div class="thanbai1">
+      <div class="sologan2">
+        <p class="t_text1 text2">Chúc Mừng Năm Mới</p>
+        <p class="t_text2 text2">Tết Nhâm Dần 2022</p>
+      </div>
+    </div>
+
+    <div class="thanbai2">
+      <p class="t_text_h1">GIẢI TRÍ</p>
+    </div>
+
+    <div class="thanbai3">
+      <p class="t_text_h1">TIỆN ÍCH</p>
+      <div class="list_tien_ich">
+        <div class="ti1">
+          <img src="https://freepikpsd.com/file/2019/10/calendar-logo-png-Transparent-Images.png" alt="lich">
+          <p>Âm lịch</p>
+        </div>
+        <div class="ti2">
+          <img src="https://i.pinimg.com/originals/f7/28/95/f72895f3ba65879121dddf6fc1e17959.png" alt="stop watch">
+          <p>Counter</p>
+        </div>
+        <!-- <iframe id="lich" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FBangkok&showTitle=0&showNav=1&showDate=1&showTz=0&showCalendars=1&showPrint=0&showTabs=0&src=NWpxNDl2YzNtZTczN21iZ2s0MTBrM3I0MjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23C0CA33" style="border-width:0" frameborder="0" scrolling="no"></iframe> -->
+      </div>
+    </div>
+    <div class="thanbain">
+    </div>
+  </div>
+  <!--//////////////////////////////// HET THAN BAI///////////////////////// -->
+  <div class="footer">
+    <div class="ketbai">
+      <br>
+      <h4>Thanks you for comming !</h4>
+      <hr style="border-top: 1px solid #cccccc;">
+      <br>
+      <p>www.truongdt.xyz là một website cá nhân mọi thông tin vui lòng liên hệ email quoctruong17@gmail.com</p>
+      <br>
+      <br>
+    </div>
+  </div>
+  <!-- /* //////////////////////////////////// */ -->
+  <!-- /* ///////////////  JS  ///////////////// */ -->
+
+  <script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active')
+    })
+
+    const navbar = document.getElementById("navbar");
+    const sticky = navbar.offsetTop;
+    // function myFunction() {
+    //   if (window.pageYOffset >= sticky) {
+    //   navbar.classList.add("sticky")
+    //   } else {
+    //   navbar.classList.remove("sticky");
+    //   }
+    // }
+    function myFunction() {
+      if (window.pageYOffset == 0) {
+        navbar.classList.remove("sticky")
+      } else {
+        navbar.classList.add("sticky");
+      }
+    }
+// console.log(sticky);
+  </script>
+</body>
+
+</html>
