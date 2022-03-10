@@ -131,7 +131,7 @@
 .divanhbia {
   width: 100%;
   height: 100vh;
-  background-image: url(../bg\ waves.jpg);
+  background-image: url(src/bg\ waves.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   backface-visibility: hidden;

@@ -11,7 +11,7 @@ a:hover {
     text-align: center;
   }
   .thanbai1 {
-    background-image: url(https://wallpaperaccess.com/full/765837.jpg);
+    background-image: url(src/q12_a3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,11 +21,11 @@ a:hover {
   }
 
   .t_text1{
-    color: yellow;
-    font-size: 100px;
+    color: white;
+    
   }
   .t_text2{
-    color: yellow;
+    color: white;
   }
   .sologan2 {
     position: relative;
