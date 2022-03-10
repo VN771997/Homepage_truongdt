@@ -16,12 +16,13 @@
 }
 
 body {
-/*   background-image: linear-gradient(
-    0deg,
-    rgba(247, 247, 247, 1) 23.8%,
-    rgba(252, 221, 221, 1) 92%
-  ); */
-/*   height: 100vh; */
+  background-image: url(css/src/q12_a3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  background-position: center center;
+  background-attachment: fixed;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +30,8 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
 }
+
+
 
 .music-container {
   background-color: #fff;
@@ -243,9 +246,13 @@ body {
 	color:white;
 }
 </style>
-    <title>Music Player</title>
   </head>
+
+
+
   <body>
+
+
     <h2 style="color:white;">DANH SÁCH NHẠC CHỌN LỌC:</h2>
 	<div id="id_divclass_listAlbum">
 	<div class="class_listAlbum" id="id_listAlbum">
@@ -291,17 +298,11 @@ body {
         </button>
       </div>
     </div>
-<!-- dfg
-- Load tên album
-- load CD img
-- load cd img listAlbum-
 
 
 
 
 
-
--->
     <script>
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
@@ -315,12 +316,14 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
+// link ảnh cd mặc định
+const ulrthumcd="css/src/img_cd.jpg"
 var songIndex=0;
 // Song titles
 const listAlbum = [
         {
           name:"DT 5 - Thời Học Sinh",
-          urlCD:"https://truongdt.xyz/src/thumAlbum.jpg",
+          urlCD:ulrthumcd,
           songs:[
                       {
                         name:"Nụ Cười 18 20 - Doãn Hiếu",
@@ -387,7 +390,7 @@ const listAlbum = [
         },
                 {
           name:"DT 3 - Nhớ Quê",
-          urlCD:"https://truongdt.xyz/src/thumAlbum.jpg",
+          urlCD:ulrthumcd,
           songs:[
                         {
                           name:"Đêm Qua Con Nằm Mơ - DIMZ, NH4T",
@@ -408,7 +411,7 @@ const listAlbum = [
         },
                 {
           name:"DT 2 - Tới Bến",
-          urlCD:"https://truongdt.xyz/src/thumAlbum.jpg",
+          urlCD:ulrthumcd,
           songs:[
                         {
                           name:"Thay Lòng - DIMZ, TVk, NH4T",

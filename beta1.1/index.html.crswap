@@ -20,16 +20,10 @@
 </head>
 
 <body onscroll="myFunction()">
-  <div class="divanhbia">
-    <div class="sologan">
-      <img class="anhlogo2" src="css/src/LogoDT071021v2.png" />
-      <p class="text1">QUỐC TRƯỞNG</p>
-      <!-- <p class="text2">"Lắng nghe và Phát triển"</p> -->
-    </div>
-  </div>
+
   <nav class="navbar" id="navbar">
-    <div class="brand-title"><a href="http://truongdt.xyz"><img class="anhlogo"
-          src="https://truongdt.xyz/src/LogoDT071021v2.png" /></a></div>
+    <div class="brand-title"><a href="#"><img class="anhlogo"
+          src="" /></a></div>
     <a class="toggle-button">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -37,8 +31,8 @@
     </a>
     <div class="navbar-links">
       <ul>
-        <li><a href="https://www.truongdt.xyz" class="textlogo">QUỐC TRƯỞNG</a></li>
-        <li><a href="https://www.truongdt.tk/gi%E1%BA%A3i-tr%C3%AD" class="page">Giải trí</a></li>
+        <li><a href="#" class="textlogo">QUỐC TRƯỞNG</a></li>
+        <li><a href="Giai tri.html" class="page">Giải trí</a></li>
         <li><a href="#">Tiện ích</a></li>
         <li><a href="#">Trò chơi</a></li>
         <li><a href="#">Chia sẻ</a></li>
@@ -46,6 +40,16 @@
       </ul>
     </div>
   </nav>
+
+
+  <div class="divanhbia">
+    <div class="sologan">
+      <img class="anhlogo2" src="css/src/LogoDT071021v2.png" />
+      <p class="text1">QUỐC TRƯỞNG</p>
+      <!-- <p class="text2">"Lắng nghe và Phát triển"</p> -->
+    </div>
+  </div>
+
   <!-- ////////////////////////////////////////////////////////////////////
 ///////////////////////////// Than Bai ////////////////////////////////////// -->
 
@@ -59,8 +63,10 @@
 
     <div class="thanbai1">
       <div class="sologan2">
-        <p class="t_text1 text2">Sự khác biệt giữa mọi người chính là cách sử dụng thời gian rảnh rổi, Thời gian này sẽ sinh ra tài năng, người lười biếng, nghiện rượi hay cờ bạc</p>
-        <p class="t_text2 text2">Albert Einstein</p>
+        <p class="t_text1">Sự khác biệt giữa mọi người chính là cách sử dụng thời gian rảnh rổi, Thời gian này sẽ sinh ra tài năng, người lười biếng, nghiện rượi hay cờ bạc</p>
+        <br>
+        <br>
+        <p class="t_text1">Albert Einstein</p>
       </div>
     </div>
 
@@ -70,6 +76,64 @@
 
     <div class="thanbai2">
       <p class="t_text_h1">GIẢI TRÍ</p>
+
+
+
+
+      
+    
+    <h2 style="color:white;">DANH SÁCH NHẠC CHỌN LỌC:</h2>
+    <div id="id_divclass_listAlbum">
+    <div class="class_listAlbum" id="id_listAlbum">
+    </div>
+    </div>
+  
+      <h2 id="nameAlbum">Album playing: </h2>
+  
+      <div class="music-container" id="music-container">
+        <div class="music-info">
+          <h4 id="title"></h4>
+          <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress" style="width: 88.2027%;"></div>
+          </div>
+          <h4 id="currTime"></h4>
+          <h4 id="durTime"></h4>
+        </div>
+        <div class="list-info">
+          <div class="song">
+              <h4 class="title">Tên bài hát</h4>
+          </div>
+        </div>
+  
+        <audio src=" " id="audio"></audio>
+  
+        <div class="img-container">
+          <img src="https://salt.tikicdn.com/ts/product/b3/f0/cd/de8d29e2a891b399dfcbac46c4895216.jpg" alt="music-cover" id="cover">
+        </div>
+  
+        
+        <div class="navigation">
+          <button id="prev" class="action-btn">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn">
+            <i class="fas fa-step-forward"></i>
+          </button>
+          <button id="list" class="action-btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+      </div>
+  
+
+
+
+
+
+
     </div>
 
 

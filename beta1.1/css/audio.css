@@ -1,0 +1,213 @@
+
+.music-container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 80px 0;
+    z-index: 10;
+  }
+  
+  .img-container {
+    position: relative;
+    width: 110px;
+  }
+  
+  .img-container::after {
+    content: '';
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+  }
+  
+  .img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 110px;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+  
+    animation-play-state: paused;
+  }
+  
+  .music-container.play .img-container img {
+    animation-play-state: running;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .action-btn {
+    background-color: #fff;
+    border: 0;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+  }
+  
+  .action-btn.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+  }
+  
+  .action-btn:focus {
+    outline: 0;
+  }
+  
+  .music-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+  }
+  
+  .music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  
+  .music-info h4{
+    margin: 0;
+  }
+  
+  #durTime{
+      float:right;
+  
+  }
+  #currTime{
+      float:left;
+  
+  }
+  
+  
+  .list-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 200px;
+    padding: 10px 10px 10px 10px;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: -1;
+    overflow:auto;
+    color:white;
+  }
+  
+  .music-container.listOn .list-info {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  
+  .progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+  }
+  
+  .progress {
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ebe7e7;
+  }
+  #id_divclass_listAlbum{
+      display:flex;
+      overflow-x: auto;
+      width:100%;
+      margin-bottom:20px;
+  }
+  #id_divclass_listAlbum::-webkit-scrollbar {height: 5px;}
+  #id_divclass_listAlbum::-webkit-scrollbar-thumb {  background-color: rgba(255, 255, 255, 0.2);}
+  
+  .class_listAlbum{
+      display:flex;
+  }  
+  .class_listAlbum > div {
+    background-color: #f1f1f1;
+    margin: 20px;
+    text-align: center;
+  /*   border: 3px solid green; */
+  }
+  .class_listAlbum .class_imgAlbum {
+      width:300px;
+      height:300px;
+      margin:auto;
+  /* 	border: 13px solid green; */
+  }
+  @media only screen and (max-width: 500px) {
+      .class_listAlbum > div {
+          font-size: 10px;
+      }
+      #title {
+          font-size: 15px;
+      }
+      .class_listAlbum .class_imgAlbum {
+          width:150px;
+          height:150px;
+  
+      }
+      .action-btn {
+        padding: 10px;
+        margin: 0 5px;
+      }
+      .music-container {
+        padding: 10px 10px;
+  
+      }
+  }
+  .class_listAlbum img {
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+  } 
+  #nameAlbum{
+      color:white;
+  }

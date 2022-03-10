@@ -40,7 +40,7 @@
     background: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
   }
-  
+
 /* ============================= thanh navibvar ======================================== */
   .navbar {
     display: flex;
@@ -93,7 +93,10 @@
   }
 
   .navbar-links li a:hover {
-    text-decoration:underline;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.2); 
+    /* text-decoration:underline; */
   }
 
   /* .navbar-links li:hover {
@@ -161,7 +164,7 @@
   }
 .text1 {
     font-family: 'Lexend Zetta', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     padding: 40px;
   }
   .text2 {
