@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <title>TruongDT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link css -->
+  <link href='css/head.css' rel='stylesheet'>
+  <link href='css/footer.css' rel='stylesheet'>
+  <link href='css/responsive.css' rel='stylesheet'>
+  <link href='css/body.css' rel='stylesheet'>
+
+  <!-- link font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@200&display=swap" rel="stylesheet">
+  <!-- link icon 3 gạch -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--======================= thanh navbar =======================-->
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active"><img class="anhlogo" src="src/LogoDT071021v2.png" alt=""></a>
+  <a href="Giai tri.html">Giải trí</a>
+  <a href="#contact">Tiện ích</a>
+  <a href="#about">Liên hệ</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<!--==============================================================-->
+
+<!--===================== content =========================================-->
+<div class="body">
+  <div class="content1">
+    <div class="ct1_box1">
+      <!-- <img class="ct1_anhlogo" src="src/LogoDT071021v2.png" /> -->
+      <p class="ct1_text1">"Sự khác biệt giữa mọi người chính là cách sử dụng thời gian rảnh rổi, Thời gian này sẽ sinh ra tài năng, người lười biếng, nghiện rượi hay cờ bạc"</p>
+      <br>
+      <p class="ct1_text2">Albert Einstein</p>
+
+    </div>
+  </div>
+  <div class="content content2">
+    <p class="ct_title">Title</p>
+  </div>
+  <div class="content content3">
+    <p class="ct_title">Title</p>
+  </div>
+</div>
+<!--==============================================================-->
+
+<!--======================= footer =======================================-->
+<div class="footer">
+  <div class="footer1">
+    <br>
+    <p class="ft_text1">Thanks you for comming !</p>
+    <hr style="border-top: 1px solid #cccccc;">
+    <br>
+    <p>www.truongdt.xyz là một website cá nhân mọi thông tin vui lòng liên hệ email quoctruong17@gmail.com</p>
+    <br>
+  </div>
+</div>
+<!--==============================================================-->
+
+<!--======================= js đóng mở menu nav =======================================-->
+<script> 
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>

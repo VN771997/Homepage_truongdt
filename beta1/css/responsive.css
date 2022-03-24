@@ -1,0 +1,23 @@
+@media screen and (max-width: 600px) {
+  
+  /* ẩn các menu nav trừ menu đầu tiên khi ở mode mobile */
+  .topnav a:not(:first-child) {display: none;}
+  
+  /* hiện 3 icon khi ở mode mobile */
+  .topnav a.icon {
+    display: block;
+  }
+  
+  .topnav {flex-direction: column;}
+
+  /* hiện menu nav khi bấm icon */
+  .topnav.responsive a {
+    display: block;
+  }
+
+  .left, .right {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+}

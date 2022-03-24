@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <title>TruongDT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link icon tabbar -->
+  <link rel="icon" href="src/LogoDT071021v2.png" type="image/icon type">
+ 
+  <!-- link font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@200&display=swap" rel="stylesheet">
+<!-- audio  -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css " rel="stylesheet">
+  <!-- link icon 3 gạch menu bar mobile mode -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- link css -->
+  <link href='css/head.css' rel='stylesheet'>
+  <link href='css/footer.css' rel='stylesheet'>
+  <link href='css/body.css' rel='stylesheet'>
+  <link href='css/audio.css' rel='stylesheet'>
+  <link href='css/responsive.css' rel='stylesheet'>
+</head>
+<body>
+<!--======================= thanh navbar =======================-->
+<div class="topnav" id="myTopnav">
+  <a href="#" class="active"><img class="anhlogo" src="src/LogoDT071021v2.png" alt=""></a>
+  <a href="#">Menu demo 1</a>
+  <a href="#">Menu demo 2</a>
+  <a href="#">Menu demo 3</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<!--==============================================================-->
+
+<!--===================== body contents =========================================-->
+<div class="body">
+  <div class="content1">
+
+  </div>
+
+  <div class="content content2 left">
+    <div class="ct_text">
+      <p class="text_title">Lịch</p>
+      <p>Xem dương lịch và âm lịch</p>
+    </div>
+    <div class="div_lich">
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FBangkok&showTitle=0&showNav=1&showDate=1&showTz=0&showCalendars=1&showPrint=0&showTabs=0&src=NWpxNDl2YzNtZTczN21iZ2s0MTBrM3I0MjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23C0CA33" style="border-width:0" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+    </div>
+  </div>
+
+  <div class="content content3 right">
+    <div class="ct_text">
+      <p class="text_title">Music</p>
+      <p>Nghe các album DT chọn lọc</p>
+      <a class="ct_link" href="Audio Player v1.2.html">Xem tất cả album</a>
+    </div>
+    <div class="div_music">
+      
+
+
+
+      <h2 id="nameAlbum">Album playing: </h2>
+      <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h4 id="title"></h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress" style="width: 88.2027%;"></div>
+        </div>
+        <h4 id="currTime"></h4>
+        <h4 id="durTime"></h4>
+      </div>
+      <div class="list-info">
+        <div class="song">
+            <h4 class="title">Tên bài hát</h4>
+        </div>
+      </div>
+
+      <audio src=" " id="audio"></audio>
+
+      <div class="img-container">
+        <img src="src/img_cd.jpg" alt="music-cover" id="cover">
+      </div>
+
+      
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-step-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-step-forward"></i>
+        </button>
+        <button id="list" class="action-btn">
+          <i class="fas fa-align-justify"></i>
+        </button>
+      </div>
+    </div><!-- div_music -->
+    </div><!-- content3 -->
+  </div>
+</div><!-- body -->
+<!--==============================================================-->
+
+<!--======================= footer =======================================-->
+<div class="footer">
+  <div class="footer1">
+    <br>
+    <p class="ft_text1">Thanks you for comming !</p>
+    <hr style="border-top: 1px solid #cccccc;">
+    <br>
+    <p>Đây là một website cá nhân mọi thông tin vui lòng liên hệ email quoctruong17@gmail.com</p>
+    <br>
+  </div>
+</div>
+<!--==============================================================-->
+
+<!--======================= js đóng mở menu nav =======================================-->
+<script> 
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="js/audio.js"></script>
+</body>
+</html>
