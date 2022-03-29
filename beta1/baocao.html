@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <title>TruongDT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link icon tabbar -->
+  <link rel="icon" href="src/LogoDT071021v2.png" type="image/icon type">
+ 
+  <!-- link font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@200&display=swap" rel="stylesheet">
+<!-- audio  -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css " rel="stylesheet">
+  <!-- link icon 3 gạch menu bar mobile mode -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- link css -->
+  <link href='css/head.css' rel='stylesheet'>
+  <link href='css/footer.css' rel='stylesheet'>
+  <link href='css/body_baocao.css'
+  <link href='css/responsive.css' rel='stylesheet'>
+</head>
+<body>
+<!--======================= thanh navbar =======================-->
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active"><img class="anhlogo" src="src/LogoDT071021v2.png" alt=""></a>
+  <a href="#">Menu demo 1</a>
+  <a href="#">Menu demo 2</a>
+  <a href="#">Menu demo 3</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<!--==============================================================-->
+
+<!--===================== body contents =========================================-->
+<div class="body">
+  <div class="content1">
+    <p>Sửa chữa:</p>
+    <input type="text" value="0" id="suachua">            
+    <p>Đánh phiếu sửa chữa:</p>
+    <input type="text" value="0" id="danhphieu">            
+    <p>Số lượng máy nhận:</p>
+    <input type="number" value="0" id="slnhan">                
+    <p>Số lượng máy giao:</p>
+    <input type="number" value="0" id="slgiao">  
+    <p>Thời hạn :</p>
+    <input type="text" value="" id="thoihan">
+    <br>
+    <br>
+    <button onclick="xong()" id="xong" class="nutnhan">Tạo bảng báo cáo</button>     
+    <hr>     
+    <div id="ketqua" style="display:none">
+    
+    <p>Người nhận:</p>
+    <input type="text" value="&#34;Tran Tan Oai&#34; &#60trantanoai@mecom.com.vn&#62, 'Trần Xuân Tăng' &#60tranxuantang@mecom.com.vn&#62" id="nguoinhan" readonly="true">
+    <button onclick="copynguoinhan()">Copy</button>
+
+
+
+    <p>Tiêu đề email:</p>
+    <input type="text" value="Báo cáo tuần " id="tieude">
+    <button onclick="copytieude()">Copy</button>
+
+
+    
+    <br>
+    <br>
+    <button onclick="selectAndCopy()">Copy bảng</button> 
+    <div id="noidung">
+    <p style="text-align: center;font-family:Arial;"><span style="font-size: 1.5rem;"><strong>B&Aacute;O C&Aacute;O THỰC HIỆN C&Ocirc;NG T&Aacute;C TUẦN</strong></span></p>
+<table border="1" cellpadding="0" cellspacing="0" width="100%">
+    <tbody style="font-family:Arial;">
+        <tr style="text-align: center;">
+            <th style="padding:0.2rem; width:2%;">TT</th>
+            <th>NỘI DUNG C&Ocirc;NG VIỆC</th>
+            <th style="width:8em;">THỜI HẠN</th>
+        </tr>
+        <tr style="text-align: center;">
+            <td>1.</td>
+            <td style="padding: 1rem; text-align: left;">
+            <div>Sửa chữa:</div>
+            <div id="t_suachua" style="color:red;"></div>
+            <div>Đánh phiếu sửa chữa:</div>
+            <div id="t_danhphieu" style="color:red;"></div>
+            </td>
+            <td id="thoihan1"></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td>2.</td>
+            <td style="padding: 1rem; text-align: left;">
+            <div>Giao nhận thiết bị:</div>
+            <div id="t_giaonhan" style="color:red;"></div>
+            </td>
+            <td id="thoihan2"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+  </div>
+</div><!-- body -->
+<!--==============================================================-->
+
+<!--======================= footer =======================================-->
+<div class="footer">
+  <div class="footer1">
+    <br>
+    <p class="ft_text1">Thanks you for comming !</p>
+    <hr style="border-top: 1px solid #cccccc;">
+    <br>
+    <p>Đây là một website cá nhân mọi thông tin vui lòng liên hệ email quoctruong17@gmail.com</p>
+    <br>
+  </div>
+</div>
+<!--==============================================================-->
+
+<!--======================= js đóng mở menu nav =======================================-->
+<script> 
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="js/baocao.js"></script>
+</body>
+</html>
