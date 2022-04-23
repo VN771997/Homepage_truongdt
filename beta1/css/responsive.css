@@ -1,9 +1,3 @@
-@media screen and (max-width: 900px) {
-  .left, .right {
-  width: calc(100% - 20px);
-  margin: 10px;
-  }
-}
 @media screen and (max-width: 600px) {
   
   /* ẩn các menu nav trừ menu đầu tiên khi ở mode mobile */
@@ -21,6 +15,11 @@
     display: block;
   }
 
+}
 
-
+@media screen and (max-width: 900px) {
+.left, .right {
+    width: calc(100% - 20px);
+    margin: 10px;
+}
 }
