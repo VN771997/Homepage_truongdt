@@ -1,0 +1,14 @@
+.footer{
+  background-color: rgba(29, 29, 31, 0.8);
+  width: calc(100% - 20px);
+  color: white;
+  margin: 5px 10px 0px 10px;
+  
+}
+.footer1 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+  

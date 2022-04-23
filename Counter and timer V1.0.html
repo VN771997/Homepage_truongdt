@@ -1,0 +1,447 @@
+<!-- code v1.1 beta 1 -->
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>Count and Timer</title>
+    <meta charset="utf-8">
+    <style>
+        body{
+              color: white;
+              background: url(https://blogger.googleusercontent.com/img/a/AVvXsEgjP9YxcvaRTQkUjN1N1dNVg9HUVYS9TWpzlVASJutNBj1mSHd_rO_pJhcnsUt6eEc4cY89BuQgt5RwR-jZslMc9l-Xp033zRy5tMFs_RsgIcij9kp2RVV1XdelDhf0s6MygDZxxpG-nDoR3b5tPP8XsAA_xuxvecCxYmFFDHnP3wp6K0xmOW8rrTQ-cA) no-repeat center fixed ; 
+  background-size: cover;
+          
+            }
+
+        p{
+            font-size: 50px;
+          text-align: center;
+            border: 0px solid red;
+            font-weight:bold;
+          margin:0px;
+          }
+        #stopwatch {
+                    width: 600px;
+          font-size: 100px;
+                    font-weight:bold;
+                    text-align: center;
+          margin:0px auto;
+          border-bottom: 4px solid yellow;
+                    }
+
+        #cha1 {
+                  margin: auto;
+                  width: 600px;
+                  
+                  padding: 10px 10px 10px 10px;
+                  border: 0px solid red;
+                  overflow: auto;
+                }
+        
+        .col-left{
+              width: 280px;
+              float: left;
+              border: 0px solid green;
+        }
+        
+        .col-right{
+              width: 280px;
+              float: right;
+              border: 0px solid green;
+        }
+
+        
+
+        #count, #count2{
+              font-size: 100px;
+              width: 280px;
+              text-align: center;
+              border: none;
+              border-bottom: 4px solid yellow;
+          	  color: white;
+          	  background-color: transparent;
+
+font-weight:bold;
+        }
+        .bangdk {
+                  margin: auto;
+                  width: 600px;
+                  border: 0px solid green;
+                  padding: 10px;
+                  overflow: auto;
+                }
+        
+        .nutnhan {
+        	cursor: pointer;
+            padding:2rem 2rem;
+            font-size:20px;
+            font-weight:bold;
+            border-radius: 30px;
+            border: 0px solid green;
+          	color: black;
+        }
+        #nut1 {
+            width: 100%;
+            padding: 100px 0;
+            margin: 20px 0 20px 0;
+            font-size:40px;
+        }
+        #nut2 {
+            width: 48%;
+            float:left;
+        }
+        #nut3 {
+            width: 48%;
+            float: right;
+
+        }
+        #nut4{
+        	display: block;
+        	padding: 10px;
+        	margin: 0px auto;
+          width: 90%;
+        }
+        #nut7{
+        	display: block;
+        	padding: 10px;
+        	margin: 0px auto;
+          width: 90%;
+        }
+        #nut8{
+        	display: block;
+        	padding: 10px;
+        	margin: 0px auto;
+          width: 90%;
+        }
+        #nut9{
+        	display: block;
+        	padding: 10px;
+        	margin: 0px auto;
+          width: 90%;
+        }
+#divdulieu {
+                  margin: auto;
+                  width: 800px;
+                  border: 0px solid green;
+                  padding: 10px;
+                  overflow: auto;
+                }
+
+
+
+
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.6);
+}
+
+.overlay-content {
+ 
+  width: 600px;
+position: relative;
+  text-align: center;
+  margin: 10% auto;
+  border: 3px solid green;
+  background-color:white;
+  border-radius: 20px;
+  overflow: auto;
+}
+
+#myFile {
+	cursor: pointer;
+	width:90%;
+	margin:40px auto;
+border: 0px solid green;
+font-size:30px;
+color:black;
+}
+.thanhnut{
+width:90%;
+margin:auto;
+	border: 0px solid green;
+height:50px;
+	    
+}
+.nuttrongthanh{
+	font-size: 30px;
+	width: 50%;
+	background-color:white;
+	border: 0px solid green;
+	cursor: pointer;
+  color: black;
+}
+#nut5 {
+        
+            float:left;
+       
+}
+#nut6{
+	border-left:2px solid black;
+            float:right;
+
+}
+#tieudechonfile {
+  
+  
+  padding:30px 0 0 0;
+  font-size: 40px;
+  color: black;
+  display: none;
+  border:0px solid green;
+}
+#inputTextToSave{
+    font-size: 30px;
+}  
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	margin: auto;
+	margin-top:50px;
+	border: 0px solid #dddddd;
+}
+
+td {
+	border: 0px solid #dddddd;
+	text-align: centre;
+	
+
+}
+tr{
+	height: 50px;
+	text-align: centre;
+}
+#note{
+	color:gray;
+	text-align: centre;
+	display:block;
+
+}
+#phanhoi{
+	color:gray;
+	display:block;
+}
+#dlink{
+	border: 0px solid #dddddd;
+    text-align: centre;
+
+
+    font-size: 20px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <p></p>            
+    
+               
+
+              
+
+             <div id="cha1">
+              <div id="stopwatch">00:00:00</div>
+                <div class="col-left">
+                  <input type="number" step="any" value="0" id="count">
+                  <p>Mục tiêu</p>
+                </div>
+
+                
+
+                <div class="col-right">
+                  <input type="number" step="any" value="0" id="count2">
+                  <p>Thành tích</p>
+                </div>
+             </div>
+
+
+             
+
+                <div class="bangdk">
+
+
+                    <button onclick="stopTimer()" id="nut2" class="nutnhan">Pause</button>
+
+                    <button onclick="resetTimer()" id="nut3" class="nutnhan">Reset</button>
+
+                    <div> <button name="button" value="OK" type="button" onclick="onAdd()" onkeypress="stopTimer()" id="nut1" class="nutnhan"> CLICK !!!</button>  </div>
+
+                </div>
+
+<div id="divdulieu">
+      <hr>
+      <p>Dữ liệu tập luyện</p>
+      <hr>
+      <span id ="inputTextToSave">- Chưa có dữ liệu cũ -<br></span>
+
+      <div id="myNav" class="overlay">
+  
+			  <div class="overlay-content">
+						<p id="tieudechonfile">Chọn file</p>
+						<input type="file" id="myFile">
+								<div class="thanhnut">
+										<hr>
+										<button class="nuttrongthanh" id="nut5"onclick="closeNav()">Thoát</button>
+										<button class="nuttrongthanh" id="nut6" onclick="loadFileAsText()">OK</button>
+
+								</div>
+			  </div>
+	</div>
+
+
+<table> 
+<tr>
+      <td style="width: 25%">
+        <button class="nutnhan" id="nut4" onclick="openNav()" >Mở dữ liệu cũ</button>
+      </td>
+      <td style="width: 25%">
+        <button class="nutnhan" id="nut7" onclick="ghidulieu()" >Ghi dữ liệu mới</button>
+      </td>
+      <td style="width: 25%">
+        <button class="nutnhan" id="nut9"  onclick="xoadulieu()" >Xóa</button>
+      </td>
+      <td style="width: 25%">
+        <span id="dlink"></span>
+      </td>
+</tr>
+</table>
+ <hr>  
+ <span id="note">Chú ý: Giao diện hỗ trợ tốt nhất cho độ phân giải màn hình Full HD scale 100% trên PC và điện thoại</span>
+ <a id="phanhoi" href="https://forms.gle/3uakRohYrVfAHHqz8" target="_blank"><ins>Gửi đánh giá hoặc phản hồi cho tác giả</ins></a>   
+</div>
+
+
+
+<!-- ==========================================================================================  -->
+      <script>  
+      var count=document.getElementById("count");
+      var count2=document.getElementById("count2");
+      function hamdem(){
+      	  var num=count.value;
+		  <!--if (num > 0){num--;}                          
+		  count.value=num;
+
+		  var num2=count2.value;
+		  num2++;
+		  count2.value=num2;
+		  
+      }
+
+
+
+
+      
+function timeToString(time) {
+  let diffInHrs = time / 3600000;
+  let hh = Math.floor(diffInHrs);
+
+  let diffInMin = (diffInHrs - hh) * 60;
+  let mm = Math.floor(diffInMin);
+
+  let diffInSec = (diffInMin - mm) * 60;
+  let ss = Math.floor(diffInSec);
+
+  let diffInMs = (diffInSec - ss) * 100;
+  let ms = Math.floor(diffInMs);
+
+  let formattedHH = hh.toString().padStart(2, "0");
+  let formattedMM = mm.toString().padStart(2, "0");
+  let formattedSS = ss.toString().padStart(2, "0");
+  let formattedMS = ms.toString().padStart(2, "0");
+
+  return `${formattedHH}:${formattedMM}:${formattedSS}`;
+}
+// Declare variables to use in our functions below
+
+let startTime;
+let elapsedTime = 0;
+let timerInterval;
+let nutstart=1;
+// Create function to modify innerHTML
+
+function print(txt) {
+  document.getElementById("stopwatch").innerHTML = txt;
+}
+
+// Create "start", "pause" and "reset" functions
+function onAdd() {
+	  hamdem();
+	    
+      if (nutstart == 1){
+						  startTime = Date.now() - elapsedTime;
+						  timerInterval = setInterval(function printTime() {elapsedTime = Date.now() - startTime;  print(timeToString(elapsedTime));if (count.value==count2.value){stopTimer();}  }, 10);
+						  nutstart=0;
+						}
+}
+function stopTimer() {
+  clearInterval(timerInterval);
+  nutstart=1;
+}
+
+function resetTimer() {
+  clearInterval(timerInterval);
+  print("00:00:00");
+  elapsedTime = 0;
+  nutstart=1;
+
+  count2.value=0;
+}
+
+
+
+
+
+
+
+      
+      
+
+      function loadFileAsText(){
+	  var myFile = document.getElementById("myFile").files[0];
+	  var fileReader = new FileReader();
+	  fileReader.onload = function(fileLoadedEvent){
+		  var textFromFileLoaded = fileLoadedEvent.target.result;
+		  document.getElementById("inputTextToSave").innerHTML = textFromFileLoaded;
+	  };
+
+	  fileReader.readAsText(myFile, "UTF-8");
+	  closeNav();
+	}
+	function ghidulieu(){
+		var thu =new Date().getDay();
+		  var thu2;
+	      if (thu==0){    thu2="CN";} else {thu2="T"+(thu+1);}
+		  var chuoingay = thu2+" "+new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()+" "+new Date().getHours()+":"+new Date().getMinutes()+" Thành tích "+count2.value+"  -  "+" Thời gian "+document.getElementById("stopwatch").innerHTML+"<br>";
+		  document.getElementById("inputTextToSave").innerHTML = document.getElementById("inputTextToSave").innerHTML+chuoingay;
+		  savefile();	
+	}
+	function savefile(){
+
+		var content = document.getElementById("inputTextToSave").innerHTML;
+		uriContent = "data:application/octet-stream," + encodeURIComponent(content);
+		document.getElementById("dlink").innerHTML = " <a href=" + uriContent + " download=\"ten_bai_tap.txt\" style=\"text-decoration: none\"><button class=\"nutnhan\" id=\"nut8\">Save file</button></a>";
+	}
+	function xoadulieu(){
+		document.getElementById("inputTextToSave").innerHTML ="- Chưa có dữ liệu cũ -<br>";
+		document.getElementById("dlink").innerHTML ="";
+	}
+	function openNav() {
+	  document.getElementById("myNav").style.display = "block";
+	}
+
+	function closeNav() {
+	  document.getElementById("myNav").style.display = "none";
+	}
+
+
+        
+</script>
+</body>
+</html>
